@@ -9,7 +9,7 @@ import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset
 import matplotlib.pyplot as plt
 
-device = torch.device('cpu') # change as req'd
+device = torch.device('cuda:0') # change as req'd
 df = pd.read_csv('results/results_100_100000_new.csv', header=None)
 model_num = 1
 # display(df)
@@ -30,8 +30,8 @@ print(X_train.shape, y_train.shape)
 # from pytorch docs
 from autoPyTorch.api.tabular_regression import TabularRegressionTask
 
-
-api = TabularRegressionTask()
+# check if this works
+api = TabularRegressionTask(cuda=True)
 
 api.search(
     X_train=X_train,
