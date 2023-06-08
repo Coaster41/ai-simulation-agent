@@ -3,7 +3,7 @@ import matplotlib.patches as mplpatches
 from typing import Optional
 import numpy as np
  # argument parser
- # thanks to Prof. Chris Vollmers for a fantastic stylesheet from BME163
+ # thanks to Prof. Chris Vollmers for a fantastic stylesheet from BME163    
 plt.style.use('BME163') # use bme163 style
 
 
@@ -12,7 +12,7 @@ data = {
     "fnn" : 0.0591,
     
     "linear reg" : 0.0656,
-    "custom ratio": 0.0727
+    "probabalistic": 0.0727
 }
 
 
@@ -27,7 +27,7 @@ y_ticks = np.arange(0, 0.11, 0.01)
 panel = plt.axes(panelData)
 panel.set_xlim(0, 5)
 panel.set_ylim(0, 0.1)
-panel.set_title("Model Evaluation")
+panel.set_title("Model Evaluation (MSE)")
 panel.set_yticks(np.arange(0,0.11,0.01), 
                  [(y_ticks[i] if i % 2 == 0 else "") for i in range(len(y_ticks))])
 panel.set_xticks(np.arange(1,5,1), data.keys())

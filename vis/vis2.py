@@ -11,7 +11,7 @@ data = {
     "fnn" : 3.13e-4,
     
     "linear reg" : 1.06e-3,
-    "custom ratio": 14,
+    "probabalistic": 7.3e-3,
     "simulator" : 1.27e4
 }
 
